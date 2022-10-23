@@ -1,13 +1,13 @@
-package com.awesomecompany.runtracker.ui.notifications
+package com.awesomecompany.runtracker.ui.history
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NotificationsViewModel : ViewModel() {
+class HistoryViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is history Fragment"
     }
     val text: LiveData<String> = _text
 }

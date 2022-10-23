@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.awesomecompany.runtracker.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_record"
+        android:name="com.awesomecompany.runtracker.ui.record.RecordFragment"
+        android:label="@string/title_record"
+        tools:layout="@layout/fragment_record" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.awesomecompany.runtracker.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_history"
+        android:name="com.awesomecompany.runtracker.ui.history.HistoryFragment"
+        android:label="@string/title_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>
