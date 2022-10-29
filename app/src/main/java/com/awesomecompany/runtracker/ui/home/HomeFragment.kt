@@ -7,23 +7,24 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.awesomecompany.runtracker.App
 import com.awesomecompany.runtracker.databinding.FragmentHomeBinding
+import javax.inject.Inject
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+
+    @Inject
+    lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        (activity?.application as App).appComponent.inject(this)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
