@@ -20,5 +20,6 @@ class ViewModelProviderModule {
 
     @Singleton
     @Provides
+
     fun provideViewModel3():RecordViewModel = RecordViewModel()
 }

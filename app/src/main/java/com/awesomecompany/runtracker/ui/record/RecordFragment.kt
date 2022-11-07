@@ -25,7 +25,7 @@ class RecordFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        (activity?.application as App).appComponent.inject(this)
+        (requireActivity().application as App).appComponent.inject(this)
 
         _binding = FragmentRecordBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -38,7 +38,7 @@ class RecordFragment : Fragment() {
     }
 
     override fun onDestroyView() {
-        super.onDestroyView()
         _binding = null
+        super.onDestroyView()
     }
 }
