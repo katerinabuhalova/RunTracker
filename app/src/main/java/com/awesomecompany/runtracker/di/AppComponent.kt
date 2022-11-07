@@ -1,6 +1,8 @@
 package com.awesomecompany.runtracker.di
 
 import com.awesomecompany.runtracker.di.module.ViewModelProviderModule
+import com.awesomecompany.runtracker.remote.RemoteModule
+import com.awesomecompany.runtracker.remote.RemoteProvider
 import com.awesomecompany.runtracker.ui.history.HistoryFragment
 import com.awesomecompany.runtracker.ui.home.HomeFragment
 import com.awesomecompany.runtracker.ui.record.RecordFragment
@@ -9,6 +11,7 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
+    dependencies = [RemoteProvider::class],
     modules = [
         ViewModelProviderModule::class
     ]
